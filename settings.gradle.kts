@@ -15,6 +15,13 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Nimbus"
+
 include(":androidApp")
 include(":shared")
+
+include(":core:ui")
+include(":core:navigation")
+
+include(":feature:auth")
+include(":feature:weather")
 
