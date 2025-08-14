@@ -1,4 +1,3 @@
-enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 pluginManagement {
     repositories {
         google()
@@ -8,6 +7,7 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
@@ -15,13 +15,11 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Nimbus"
-
-include(":androidApp")
-include(":shared")
-
-include(":core:ui")
-include(":core:navigation")
-
-include(":feature:auth")
-include(":feature:weather")
-
+include(
+    ":androidApp",
+    ":shared",
+    ":core:ui",
+    ":core:navigation",
+    ":feature:auth",
+    ":feature:weather"
+)
