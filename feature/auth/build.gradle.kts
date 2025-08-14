@@ -37,4 +37,7 @@ dependencies {
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler.ksp)
     implementation(libs.androidx.hilt.navigation.compose)
+
+    detektPlugins(libs.staticAnalysis.detektFormatting)
+    detektPlugins(libs.staticAnalysis.detektLibraries)
 }

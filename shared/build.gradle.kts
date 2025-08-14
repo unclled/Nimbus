@@ -38,3 +38,8 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 }
+
+dependencies {
+    detektPlugins(libs.staticAnalysis.detektFormatting)
+    detektPlugins(libs.staticAnalysis.detektLibraries)
+}

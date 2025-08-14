@@ -10,17 +10,21 @@ plugins {
 }
 
 subprojects {
-    if (plugins.hasPlugin("io.gitlab.arturbosch.detekt")) {
-        detekt {
-            config.setFrom(files("$rootDir/config/detekt/detekt.yml"))
-            source.setFrom(files(projectDir.toPath().resolve("src")))
+    plugins.withId("io.gitlab.arturbosch.detekt") {
+        dependencies {
+            detektPlugins(libs.staticAnalysis.detektFormatting)
+            detektPlugins(libs.staticAnalysis.detektLibraries)
         }
     }
+}
+
+tasks.withType<io.gitlab.arturbosch.detekt.Detekt>().configureEach {
+    config.setFrom(files("$rootDir/config/detekt/detekt.yml"))
+    jvmTarget = "17"
 }
 
 tasks.register("detektAll") {
     group = "verification"
     description = "Runs Detekt on all modules."
-    val detektTasks = subprojects.map { it.tasks.withType<io.gitlab.arturbosch.detekt.Detekt>() }
-    dependsOn(detektTasks)
+    dependsOn(tasks.withType<io.gitlab.arturbosch.detekt.Detekt>())
 }

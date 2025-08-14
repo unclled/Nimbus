@@ -27,4 +27,7 @@ dependencies {
     val composeBom = platform(libs.androidx.compose.bom)
     implementation(composeBom)
     implementation(libs.androidx.ui)
+
+    detektPlugins(libs.staticAnalysis.detektFormatting)
+    detektPlugins(libs.staticAnalysis.detektLibraries)
 }

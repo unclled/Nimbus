@@ -74,4 +74,7 @@ dependencies {
     // Datastore
     implementation(libs.androidx.datastore.preferences)
     implementation(libs.protobuf.kotlin.lite)
+
+    detektPlugins(libs.staticAnalysis.detektFormatting)
+    detektPlugins(libs.staticAnalysis.detektLibraries)
 }

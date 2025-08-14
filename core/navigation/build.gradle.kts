@@ -21,4 +21,10 @@ android {
 
 dependencies {
     implementation(libs.androidx.navigation.compose)
+
+    detektPlugins(libs.staticAnalysis.detektFormatting)
+    detektPlugins(libs.staticAnalysis.detektLibraries)
+
+    detektPlugins(libs.staticAnalysis.detektFormatting)
+    detektPlugins(libs.staticAnalysis.detektLibraries)
 }
