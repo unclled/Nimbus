@@ -9,7 +9,7 @@ plugins {
 
 android {
     namespace = "com.project.nimbus.feature.auth"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 24
@@ -33,10 +33,22 @@ dependencies {
     implementation(project(":core:navigation"))
     implementation(project(":shared"))
 
-    // Hilt
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler.ksp)
     implementation(libs.androidx.hilt.navigation.compose)
+
+    // Android & Compose
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.activity.compose)
+    val composeBom = platform(libs.androidx.compose.bom)
+    implementation(composeBom)
+    androidTestImplementation(composeBom)
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.ui.graphics)
+    implementation(libs.androidx.ui.tooling.preview)
+    implementation(libs.androidx.material3)
+    implementation(libs.androidx.material3.android)
 
     detektPlugins(libs.staticAnalysis.detektFormatting)
     detektPlugins(libs.staticAnalysis.detektLibraries)

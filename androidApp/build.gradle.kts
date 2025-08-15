@@ -4,11 +4,12 @@ plugins {
     alias(libs.plugins.kotlin.dagger.hilt)
     alias(libs.plugins.kotlin.ksp)
     alias(libs.plugins.detekt)
+    alias(libs.plugins.kotlin.compose)
 }
 
 android {
     namespace = "com.project.nimbus.android"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.project.nimbus.android"
@@ -38,11 +39,16 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+    buildFeatures {
+        compose = true
+    }
 }
 
 dependencies {
     implementation(project(":core:ui"))
     implementation(project(":core:navigation"))
+    implementation(project(":feature:auth"))
+    implementation(project(":feature:weather"))
     implementation(project(":shared"))
 
     // Hilt

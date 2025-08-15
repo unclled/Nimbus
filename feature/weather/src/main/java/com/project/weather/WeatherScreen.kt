@@ -1,9 +1,9 @@
-package com.project.navigation
+package com.project.weather
 
 import androidx.compose.runtime.Composable
 
 @Composable
-fun NimbusNavHost(
+fun WeatherScreen(
 
 ) {
 }

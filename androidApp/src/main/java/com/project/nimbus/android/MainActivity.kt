@@ -1,40 +1,43 @@
 package com.project.nimbus.android
 
+import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import androidx.annotation.RequiresApi
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
+import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.project.nimbus.Greeting
+import androidx.compose.ui.graphics.Color
+import com.project.navigation.Auth
+import com.project.nimbus.android.navigation.NimbusNavScreen
+import com.project.ui.theme.NimbusTheme
 
 class MainActivity : ComponentActivity() {
+    @RequiresApi(Build.VERSION_CODES.Q)
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
+        window.isNavigationBarContrastEnforced = false
         super.onCreate(savedInstanceState)
         setContent {
-            MyApplicationTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+            NimbusTheme {
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
                 ) {
-                    GreetingView(Greeting().greet())
+                    Surface(
+                        modifier = Modifier.fillMaxSize(),
+                        color = Color.Transparent
+                    ) {
+                        NimbusNavScreen(
+                            startDestination = Auth.route
+                        )
+                    }
+
                 }
             }
         }
-    }
-}
-
-@Composable
-fun GreetingView(text: String) {
-    Text(text = text)
-}
-
-@Preview
-@Composable
-fun DefaultPreview() {
-    MyApplicationTheme {
-        GreetingView("Hello, Android!")
     }
 }
