@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">ui</string>
+    <string name="app_name">Nimbus</string>
+    <string name="hello_text">Привет</string>
+    <string name="location_detected">мы определили твою локацию</string>
 </resources>

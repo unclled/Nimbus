@@ -11,7 +11,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import com.project.navigation.Auth
+import com.project.navigation.Loading
 import com.project.nimbus.android.navigation.NimbusNavScreen
 import com.project.ui.theme.NimbusTheme
 
@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
                         color = Color.Transparent
                     ) {
                         NimbusNavScreen(
-                            startDestination = Auth.route
+                            startDestination = Loading.route
                         )
                     }
 

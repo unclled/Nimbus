@@ -11,8 +11,8 @@ data class Typography(
     val displayLarge: TextStyle = TextStyle(
         fontFamily = annabelleCyrFamily,
         fontWeight = FontWeight.Normal,
-        fontSize = 52.sp,
-        lineHeight = 52.sp
+        fontSize = 90.sp,
+        lineHeight = 90.sp
     ),
 
     val displayMedium: TextStyle = TextStyle(

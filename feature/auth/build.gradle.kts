@@ -34,6 +34,7 @@ dependencies {
     implementation(project(":shared"))
 
     implementation(libs.hilt.android)
+    debugImplementation(libs.androidx.compose.ui.ui.tooling)
     ksp(libs.hilt.android.compiler.ksp)
     implementation(libs.androidx.hilt.navigation.compose)
 
@@ -52,4 +53,6 @@ dependencies {
 
     detektPlugins(libs.staticAnalysis.detektFormatting)
     detektPlugins(libs.staticAnalysis.detektLibraries)
+
+    implementation(libs.accompanist.permissions)
 }
