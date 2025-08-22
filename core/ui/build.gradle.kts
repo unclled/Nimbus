@@ -27,9 +27,6 @@ android {
 }
 
 dependencies {
-    implementation(libs.hilt.android)
-    implementation(libs.androidx.hilt.navigation.compose)
-
     // Android & Compose
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -42,6 +39,7 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.material3.android)
+    debugImplementation(libs.androidx.compose.ui.ui.tooling)
 
     detektPlugins(libs.staticAnalysis.detektFormatting)
     detektPlugins(libs.staticAnalysis.detektLibraries)

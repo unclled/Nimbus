@@ -7,7 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.project.auth.presentation.loading.AuthScreen
+import com.project.auth.presentation.auth.AuthScreen
 import com.project.auth.presentation.loading.LoadingScreen
 import com.project.navigation.Loading
 import com.project.navigation.Weather

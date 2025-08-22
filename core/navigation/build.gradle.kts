@@ -24,10 +24,6 @@ android {
 }
 
 dependencies {
-
-    implementation(libs.hilt.android)
-    implementation(libs.androidx.hilt.navigation.compose)
-
     // Android & Compose
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

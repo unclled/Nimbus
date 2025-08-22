@@ -14,6 +14,10 @@ import androidx.compose.ui.graphics.Color
 import com.project.navigation.Loading
 import com.project.nimbus.android.navigation.NimbusNavScreen
 import com.project.ui.theme.NimbusTheme
+import com.project.nimbus.di.appModule
+import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
+import org.koin.core.context.startKoin
 
 class MainActivity : ComponentActivity() {
     @RequiresApi(Build.VERSION_CODES.Q)
@@ -21,6 +25,11 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         window.isNavigationBarContrastEnforced = false
         super.onCreate(savedInstanceState)
+        startKoin {
+            androidLogger()
+            androidContext(this@MainActivity)
+            modules(appModule)
+        }
         setContent {
             NimbusTheme {
                 Box(

@@ -2,7 +2,6 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.kotlin.dagger.hilt)
     alias(libs.plugins.kotlin.ksp)
     alias(libs.plugins.detekt)
 }
@@ -33,9 +32,10 @@ dependencies {
     implementation(project(":core:navigation"))
     implementation(project(":shared"))
 
-    implementation(libs.hilt.android)
-    ksp(libs.hilt.android.compiler.ksp)
-    implementation(libs.androidx.hilt.navigation.compose)
+    // Koin
+    implementation(libs.koin.core)
+    implementation(libs.koin.android)
+    implementation(libs.koin.androidx.compose)
 
     // Android & Compose
     implementation(libs.androidx.core.ktx)

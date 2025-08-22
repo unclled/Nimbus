@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.dagger.hilt)
     alias(libs.plugins.kotlin.ksp)
     alias(libs.plugins.detekt)
     alias(libs.plugins.kotlin.compose)
@@ -14,7 +13,6 @@ android {
     defaultConfig {
         applicationId = "com.project.nimbus.android"
         minSdk = 24
-        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -51,10 +49,12 @@ dependencies {
     implementation(project(":feature:weather"))
     implementation(project(":shared"))
 
-    // Hilt
-    implementation(libs.hilt.android)
-    ksp(libs.hilt.android.compiler.ksp)
-    implementation(libs.androidx.hilt.navigation.compose)
+    // Koin
+    implementation(libs.koin.core)
+    implementation(libs.koin.android)
+    implementation(libs.koin.androidx.compose)
+
+    implementation(libs.androidx.navigation.compose)
 
     // Android & Compose
     implementation(libs.androidx.core.ktx)
@@ -85,4 +85,6 @@ dependencies {
 
     detektPlugins(libs.staticAnalysis.detektFormatting)
     detektPlugins(libs.staticAnalysis.detektLibraries)
+
+    implementation(libs.koin.core)
 }
