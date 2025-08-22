@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="auth_app_icon_size">32dp</dimen>
+    <dimen name="thunder_icon_size">20dp</dimen>
+
+    <dimen name="text_field_height">52dp</dimen>
+
+    <dimen name="button_width">164dp</dimen>
+    <dimen name="button_height">54dp</dimen>
 
     <dimen name="padding_1">1dp</dimen>
     <dimen name="padding_2">2dp</dimen>
@@ -14,6 +20,8 @@
     <dimen name="padding_20">20dp</dimen>
     <dimen name="padding_22">22dp</dimen>
     <dimen name="padding_24">24dp</dimen>
+    <dimen name="padding_32">32dp</dimen>
+    <dimen name="padding_64">64dp</dimen>
 
     <dimen name="elevation_1">1dp</dimen>
     <dimen name="elevation_2">2dp</dimen>
@@ -26,7 +34,7 @@
     <dimen name="corner_radius_12">12dp</dimen>
     <dimen name="corner_radius_16">16dp</dimen>
     <dimen name="corner_radius_18">18dp</dimen>
-    <dimen name="corner_radius_20">20dp</dimen>
+    <dimen name="corner_radius_24">24dp</dimen>
 
 
 </resources>

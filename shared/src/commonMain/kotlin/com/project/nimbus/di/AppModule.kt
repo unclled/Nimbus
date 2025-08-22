@@ -28,5 +28,5 @@ val appModule = module {
 
     factory { GetConsensusWeatherUseCase(get()) }
 
-    factory { WeatherViewModel(get(), get()) }
+    factory { WeatherViewModel(get(), get(), get()) }
 }.plus(platformModule())

@@ -1,12 +1,10 @@
-package com.project.ui.components
+package com.project.ui.components.background
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.BlurEffect
 import androidx.compose.ui.graphics.graphicsLayer
@@ -19,7 +17,7 @@ import com.project.ui.utils.Constants
 
 @Composable
 fun BackgroundImage(
-    content: @Composable () -> Unit
+    content: @Composable BoxScope.() -> Unit
 ) {
     Box(
         modifier = Modifier.fillMaxSize()
@@ -37,14 +35,13 @@ fun BackgroundImage(
                 },
             contentScale = ContentScale.FillBounds
         )
-
-        Column(
+        ParticleCanvas(
             modifier = Modifier.fillMaxSize(),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            content()
-        }
+            particleCount = 100,
+            particleColor = NimbusTheme.colors.accentColor.copy(alpha = 0.5f)
+        )
+
+        content()
     }
 }
 

@@ -18,8 +18,8 @@ data class Typography(
     val displayMedium: TextStyle = TextStyle(
         fontFamily = ibmPlexSansFamily,
         fontWeight = FontWeight.SemiBold,
-        fontSize = 24.sp,
-        lineHeight = 28.sp
+        fontSize = 36.sp,
+        lineHeight = 40.sp
     ),
 
     val titleLarge: TextStyle = TextStyle(
@@ -32,7 +32,7 @@ data class Typography(
     val titleMedium: TextStyle = TextStyle(
         fontFamily = ibmPlexSansFamily,
         fontWeight = FontWeight.Normal,
-        fontSize = 18.sp,
+        fontSize = 20.sp,
         lineHeight = 20.sp
     ),
 

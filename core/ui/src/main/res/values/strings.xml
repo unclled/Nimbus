@@ -2,5 +2,14 @@
     <string name="app_name">Nimbus</string>
     <string name="hello_text">Привет</string>
     <string name="location_detected">Мы определили твою локацию</string>
-    <string name="location_not_detected">Ты не предоставил разрешения</string>
+    <string name="location_not_detected">Мы не определили твою локацию</string>
+    <string name="failed_complete_request">Не удалось выполнить запрос</string>
+    <string name="detect">определили</string>
+    <string name="location">локацию</string>
+    <string name="not">не</string>
+    <string name="enter_your_location">Введите местоположение</string>
+    <string name="enter_for_weather_info">Укажите интересующее местоположение чтобы получить актуальный прогноз!</string>
+    <string name="not_your_location">это не ваше местоположение?</string>
+    <string name="change_location">изменить</string>
+    <string name="to_next_page">Вперед</string>
 </resources>

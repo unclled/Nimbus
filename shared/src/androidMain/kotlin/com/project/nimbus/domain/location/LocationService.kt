@@ -6,6 +6,8 @@ import android.content.pm.PackageManager
 import android.location.LocationManager
 import androidx.core.content.ContextCompat
 import com.google.android.gms.location.LocationServices
+import com.project.nimbus.domain.model.LocationCoordinates
+import com.project.nimbus.domain.repository.LocationService
 import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlin.coroutines.resume
 
